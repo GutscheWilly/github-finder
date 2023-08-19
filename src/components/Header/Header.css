@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 100%;
+    max-width: 560px;
+    border-radius: 48px;
+}   
+
+.search-message {
+    font-size: 1.4em;
+    font-weight: 640;
+    padding: 16px 0 0;
+    color: blanchedalmond;
+}

@@ -1,0 +1,23 @@
+.search-bar {
+    padding: 16px 0;
+}
+
+.search-input {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    margin-right: 4px;
+    font-size: 1em;
+    outline: none;
+    padding: 4px;
+}
+
+.search-button {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 4px;
+}
