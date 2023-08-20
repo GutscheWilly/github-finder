@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: burlywood;
+    background: linear-gradient(to bottom, mediumspringgreen, darkturquoise, black);
+    height: 100vh;
 }
 
 .container {

@@ -5,19 +5,19 @@
 .search-input {
     background-color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 16px;
     margin-right: 4px;
     font-size: 1em;
     outline: none;
-    padding: 4px;
+    padding: 6px;
 }
 
 .search-button {
     border: none;
     background-color: black;
     color: white;
-    border-radius: 8px;
+    border-radius: 16px;
     font-size: 1em;
     cursor: pointer;
-    padding: 4px;
+    padding: 6px;
 }
