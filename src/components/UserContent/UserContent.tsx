@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { GrLocation } from 'react-icons/gr';
 
 import './UserContent.css';
+import AppContext from '../../context/AppContext';
+import User from '../../interfaces/User';
 
 function UserContent() {
+    const { user }: { user: User | null } = useContext(AppContext);
+
+    useEffect( () => {
+        console.log(user);
+    }, [user]);
+
     return (
         <section className="user-content">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZCldKgmO2Hs0UGk6nRClAjATKoF9x2liYYA&usqp=CAU" alt="Avatar" className="avatar" />
+            <img src={user?.avatar_url} alt="Avatar" className="avatar" />
 
-            <h2 className="name">Willy</h2>
+            <h2 className="name">{user?.name}</h2>
 
             <div className="location-content">
                 <div className="location-icon"><GrLocation /></div>
-                <div className="location-text">São José</div>
+                <div className="location-text">{user?.location}</div>
             </div>
         </section>
     );
