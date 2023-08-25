@@ -8,12 +8,12 @@ import User from '../../interfaces/User';
 function UserContent() {
     const { user }: { user: User | null } = useContext(AppContext);
 
-    useEffect( () => {
-        console.log(user);
-    }, [user]);
+    function isThereUser(): boolean {
+        return user !== null;
+    }
 
     return (
-        <section className="user-content">
+        <section className={ `user-content ${isThereUser() ? '' : 'hidden'}` }>
             <img src={user?.avatar_url} alt="Avatar" className="avatar" />
 
             <h2 className="name">{user?.name}</h2>

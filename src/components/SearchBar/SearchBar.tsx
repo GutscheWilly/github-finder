@@ -16,6 +16,7 @@ function SearchBar() {
 
         fechUser(userSearch).then( (userResponse: User) => {
             setUser(userResponse);
+            setUserSearch('');
         });
     }
 
