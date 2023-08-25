@@ -14,9 +14,13 @@ function SearchBar() {
     function handleSearch(event: any): void {
         event.preventDefault();
 
-        fechUser(userSearch).then( (userResponse: User) => {
+        fechUser(userSearch).then( (userResponse: User | null) => {
             setUser(userResponse);
             setUserSearch('');
+
+            if (userResponse === null) {
+                alert('Usuário não encontrado!');
+            }
         });
     }
 
