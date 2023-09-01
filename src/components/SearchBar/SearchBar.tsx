@@ -9,18 +9,24 @@ import User from '../../interfaces/User';
 function SearchBar() {
     const [userSearch, setUserSearch] = useState<string>('');
 
-    const { setUser } = useContext(AppContext);
+    const { 
+        setUser,
+        setIsLoading
+    } = useContext(AppContext);
 
     function handleSearch(event: any): void {
         event.preventDefault();
+        setIsLoading(true);
 
-        fechUser(userSearch).then( (userResponse: User | null) => {
+        fechUser(userSearch).then( (userResponse: User | undefined) => {
             setUser(userResponse);
             setUserSearch('');
 
-            if (userResponse === null) {
+            if (userResponse === undefined) {
                 alert('Usuário não encontrado!');
             }
+
+            setIsLoading(false);
         });
     }
 

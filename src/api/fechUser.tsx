@@ -1,6 +1,6 @@
 import User from '../interfaces/User';
 
-async function fechUser(userName: string): Promise<User | null> {
+async function fechUser(userName: string): Promise<User | undefined> {
     const endpoint = `https://api.github.com/users/${userName}`;
     const response = await fetch(endpoint);
 
@@ -8,7 +8,7 @@ async function fechUser(userName: string): Promise<User | null> {
         return await response.json();
     }
 
-    return null;
+    return undefined;
 }
 
 export default fechUser;
