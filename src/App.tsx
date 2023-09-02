@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './components/Header/Header';
 
 import './App.css';
-import UserContent from './components/UserContent/UserContent';
 import AppProvider from './context/AppProvider';
+
+import UserContent from './components/UserContent/UserContent';
 
 function App() {
     return (

@@ -3,11 +3,14 @@ import AppContext from './AppContext';
 import User from '../interfaces/User';
 
 function AppProvider({ children }: { children: ReactNode }) {
-    const [user, setUser] = useState<User | null>(null);
+    const [user, setUser] = useState<User | undefined>(undefined);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const value = {
         user,
-        setUser
+        setUser,
+        isLoading,
+        setIsLoading
     };
 
     return (
