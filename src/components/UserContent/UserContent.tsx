@@ -5,6 +5,7 @@ import './UserContent.css';
 import AppContext from '../../context/AppContext';
 import User from '../../interfaces/User';
 import Loading from '../Loading/Loading';
+import Card from '../Card/Card';
 
 function UserContent() {
     const { 
@@ -27,6 +28,13 @@ function UserContent() {
                     <div className="location-icon"><GrLocation /></div>
                     <div className="location-text">{user?.location}</div>
                 </div>
+
+                <div className="followers-info">
+                    <Card text="Seguidores" value={user?.followers} />
+                    <Card text="Seguindo" value={user?.following} />
+                </div>
+
+                <a href={user?.html_url} className="github-link" target="_blank" rel="noreferrer">Acessar GitHub</a>
             </section>
         );
     }

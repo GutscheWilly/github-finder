@@ -3,7 +3,8 @@ interface User {
     avatar_url: string,
     location: string,
     followers: number,
-    following: number
+    following: number,
+    html_url: string
 }
 
 export default User;
